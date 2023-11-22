@@ -41,5 +41,18 @@ for %%g in (AMD;NVIDIA) do (
 	)
 	echo.
 )
+
+:: New NVIDIA's graphics cache location
+if exist "%localappdata%\..\LocalLow\NVIDIA\PerDriverVersion\DxCache\*a15f919d5ab57a19*" (
+	echo Removind NVIDIA graphics cache in new location...
+	del /q "%localappdata%\..\LocalLow\NVIDIA\PerDriverVersion\DxCache\*a15f919d5ab57a19*" > nul
+	if exist "%localappdata%\..\LocalLow\NVIDIA\PerDriverVersion\DxCache\*a15f919d5ab57a19*" (
+		echo Failed to delete NVIDIA graphics cache in new location cache :^(
+	) else echo NVIDIA graphics cache in new location was removed
+) else (
+	echo NVIDIA Graphics cache in new location not found
+)
+echo.
+
 echo Press any key to exit...
 pause > nul
