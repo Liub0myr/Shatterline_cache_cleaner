@@ -18,9 +18,9 @@ goto game_check_loop
 :game_check_loop_exit
 
 :: Game cache
-if exist "%userprofile%\Saved Games\Shatterline\LIVE2NAL32J2WI\user\cache" (
+if exist "%userprofile%\Saved Games\Shatterline\LIVER7211G8K6M\user\cache" (
 	echo Removind game cache...
-	rd /s /q "%userprofile%\Saved Games\Shatterline\LIVE2NAL32J2WI\user\cache"
+	rd /s /q "%userprofile%\Saved Games\Shatterline\LIVER7211G8K6M\user\cache"
 	if not %errorlevel%==0 (
 		echo Failed to delete game cache :^(
 	) else echo Game cache was removed
